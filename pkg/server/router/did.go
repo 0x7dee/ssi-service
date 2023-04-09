@@ -287,11 +287,11 @@ type ResolveDIDResponse struct {
 // @Tags        DecentralizedIdentityAPI
 // @Accept      json
 // @Produce     json
-// @Param       method  path     string                   true "Method"
-// @Param       id      path     string                   true "ID"
-// @Success     204     {string} string "No Content"
-// @Failure     400     {string} string "Bad request"
-// @Failure     500     {string} string "Internal server error"
+// @Param       method path     string true "Method"
+// @Param       id     path     string true "ID"
+// @Success     204    {string} string "No Content"
+// @Failure     400    {string} string "Bad request"
+// @Failure     500    {string} string "Internal server error"
 // @Router      /v1/dids/{method}/{id} [delete]
 func (dr DIDRouter) SoftDeleteDIDByMethod(ctx context.Context, w http.ResponseWriter, _ *http.Request) error {
 	method := framework.GetParam(ctx, MethodParam)
